@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ChangeEvent} from "react";
+import React, { useState, useEffect, ChangeEvent } from "react";
 import { Table, Form, FormGroup, Label, Input } from "reactstrap";
 import { Track } from "../types/Track";
 import { fetchAllTracks, fetchTracksForArtist } from "../api/trackApi";
@@ -17,7 +17,7 @@ export function TracksTable() {
   const onArtistFieldChange = async (event: ChangeEvent<HTMLInputElement>) => {
     const tracks = await fetchTracksForArtist(event.target.value);
     setTracks(tracks);
-  }
+  };
 
   return (
     <div>

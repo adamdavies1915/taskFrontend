@@ -9,5 +9,4 @@ export async function fetchAllTracks(): Promise<Track[]> {
 export async function fetchTracksForArtist(artist: string): Promise<Track[]> {
   const response = await axios(`http://localhost:3000/track?artist=${artist}`);
   return response.data;
-
 }
